@@ -11,14 +11,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			body{
-				background-image: url("images/double-bubble-outline.png");
-			}
-		</style>
+
 	</head>
 	<body class="is-preload ">
-
+	<div id="app">
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -31,13 +27,14 @@
 							<div class="inner">
 								<h1>Welcome to My Blog</h1>
 								<p>tfsui3's blog</p>
+								<button @click="startButton">Start</button>
 							</div>
 						</div>
 						<nav>
 							<ul>
 								<li><a href="HomePage.html">Home</a></li>
 								<li><a href="#intro">Intro</a></li>
-								<li><a href="#about">About</a></li>
+								<li><a href="#about">About Me</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -63,9 +60,9 @@
 								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
 							</article>
 
-						<!-- About -->
+						<!-- About Me -->
 							<article id="about">
-								<h2 class="major">About</h2>
+								<h2 class="major">Me</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
 							</article>
@@ -351,9 +348,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</footer>
 
 			</div>
-
+	</div>
 		<!-- BG -->
 			<div id="bg"></div>
+
+	<!--vue components-->
+<!--	<template id="start-template">-->
+<!--		<a class="myStart" href="HomePage.html"></a>-->
+<!--	</template>-->
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -361,6 +363,28 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<!--Vue's scripts-->
+			<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script>
+		// let startComponent = {
+		// 	template:"start-template",
+		//
+		// }
 
+		let app = new Vue({
+			el:"#app",
+			data:{
+
+			},components:{
+				// startComponent
+			},
+			methods:{
+				startButton:function () {
+					window.location.href="HomePage.html";
+				}
+			}
+
+		})
+	</script>
 	</body>
 </html>
